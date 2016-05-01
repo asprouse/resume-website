@@ -16,6 +16,11 @@ app.use(require('webpack-hot-middleware')(compiler));
 
 app.use('/public', express.static('public'));
 
+var resumePath = path.join(__dirname, '../resume/resume.json');
+app.get('/resume.json', function(req, res) {
+  res.sendFile(resumePath);
+});
+
 app.get('*', function(req, res) {
     res.sendFile(path.join(__dirname, 'app', 'index.html'));
 });
