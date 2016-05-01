@@ -3,9 +3,10 @@ export default (c) => {
   <html lang="en">
     <head>
       <title>${c.title}</title>
-     <meta name="viewport" content="width=device-width,initial-scale=1" />
-     <link rel="stylesheet" href="${c.cssAsset}" />
-
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <meta name="revision" content="${c.revision}" />
+      <meta name="generated" content="${c.generated}" />
+      <link rel="stylesheet" href="${c.cssAsset}" />
    </head>
    <body>
      <div id="app">${c.body}</div>
