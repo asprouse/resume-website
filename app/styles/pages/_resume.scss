@@ -1,0 +1,106 @@
+a {
+  text-decoration: none;
+
+  &:link,
+  &:visited {
+    color: black;
+  }
+
+  &:hover,
+  &:active {
+    color: #ccc;
+  }
+};
+
+.person {
+  margin: 4rem;
+
+  .name {
+    font-size: 3rem;
+    text-decoration: underline;
+  }
+
+  .location {
+    font-size: 2rem;
+  }
+}
+
+.education {
+  margin: 4rem;
+
+  .name {
+    font-weight: bold;
+  }
+
+  .location {
+    display: inline;
+  }
+
+  .honors {
+    margin: 2rem 0;
+    ul {
+      margin: 0 2rem;
+    }
+  }
+}
+
+.experience {
+  margin: 4rem;
+  .job {
+    margin: 4rem;
+    border-bottom: 1px solid black;
+
+    .company,
+    .title {
+      font-weight: bold;
+    }
+
+    .technologies {
+      margin: 2rem 4rem;
+
+      ul {
+        @include clearfix;
+      }
+
+      li {
+        float: left;
+        margin-right: 0.5rem;
+        .tech {
+          display: inline-block;
+        }
+        &:after {
+          content: ", ";
+        }
+        &:last-child {
+          margin-right: 0;
+          &:after {
+            content: "";
+          }
+        }
+      }
+    }
+  }
+
+  .location {
+    float: left;
+  }
+
+  .date-range {
+    float: right;
+  }
+
+  .projects {
+    margin-top: 4rem;
+    clear: both;
+  }
+
+  .project {
+    margin: 4rem;
+    &:before {
+      float: left;
+      content: "-";
+      font-weight: bold;
+      margin-left: -2rem;
+    }
+  }
+}

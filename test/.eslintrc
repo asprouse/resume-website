@@ -1,0 +1,35 @@
+{
+  "extends": "eslint-config-airbnb",
+  "env": {
+    "browser": true,
+    "mocha": true,
+    "node": true
+  },
+  "globals": {
+    "__CLIENT__": true,
+    "__SERVER__": true,
+    "__DEV__": true,
+    "__DEVTOOLS__": true,
+    "ga": true,
+    "Stripe": true,
+    "chrome": true,
+    "safari": true,
+    "SAFARI": true
+  },
+  "rules": {
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/react-in-jsx-scope": 2,
+    "react/no-multi-comp": [2,  { "ignoreStateless": true }],
+    "indent": [2, 2, {"SwitchCase": 0}],
+    "object-curly-spacing": 0,
+    "comma-dangle": 0,
+    "padded-blocks": 0,
+    "id-length": 0,
+    "new-cap": 0
+  },
+  "parser": "babel-eslint",
+  "plugins": [
+    "react"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "render",
+  "runtime": "nodejs4.3",
+  "description": "Renders Andrew Sprouse's resume website",
+  "customName": false,
+  "customRole": false,
+  "handler": "handler.handler",
+  "timeout": 6,
+  "memorySize": 128,
+  "authorizer": {},
+  "custom": {
+    "excludePatterns": []
+  },
+  "endpoints": [],
+  "events": [
+    {
+      "name": "RenderResume",
+      "type": "sns",
+      "config": {
+        "topicName": "RenderResume"
+      }
+    }
+  ],
+  "environment": {
+    "SERVERLESS_PROJECT": "${project}",
+    "SERVERLESS_STAGE": "${stage}",
+    "SERVERLESS_REGION": "${region}"
+  },
+  "vpc": {
+    "securityGroupIds": [],
+    "subnetIds": []
+  }
+}

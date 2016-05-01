@@ -1,0 +1,11 @@
+{
+  "name": "resume-renderer",
+  "custom": {
+    "webpack": {
+      "configPath": "webpack.config.lambda.js"
+    }
+  },
+  "plugins": [
+    "serverless-webpack-plugin"
+  ]
+}
