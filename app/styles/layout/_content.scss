@@ -1,0 +1,13 @@
+a {
+  text-decoration: none;
+
+  &:link,
+  &:visited {
+    color: black;
+  }
+
+  &:hover,
+  &:active {
+    color: #ccc;
+  }
+};

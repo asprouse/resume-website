@@ -6,12 +6,13 @@ function Project({ technologies, description }) {
   return (
     <section className="project">
       <div className="description" dangerouslySetInnerHTML={{__html: description }} />
+
       <div className="technologies">
-        Technologies:
-        <ul>
+        <ul className="technologies-list">
           {technologyItems}
         </ul>
       </div>
+
     </section>
   );
 }

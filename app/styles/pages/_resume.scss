@@ -1,20 +1,27 @@
-a {
-  text-decoration: none;
+%indented {
+  margin-left: 2em;
 
-  &:link,
-  &:visited {
-    color: black;
+  @include above(mobile) {
+    margin-left: 4rem;
+  }
+}
+
+.resume {
+  margin: 2em;
+
+  @include above(mobile) {
+    margin: 4rem;
   }
 
-  &:hover,
-  &:active {
-    color: #ccc;
+  @include breakpoint(min-width 980px) {
+    margin: 4rem auto;
   }
-};
+
+  max-width: 90rem;
+}
 
 .person {
-  margin: 4rem;
-
+  margin-bottom: 3rem;
   .name {
     font-size: 3rem;
     text-decoration: underline;
@@ -26,7 +33,6 @@ a {
 }
 
 .education {
-  margin: 4rem;
 
   .name {
     font-weight: bold;
@@ -45,57 +51,62 @@ a {
 }
 
 .experience {
-  margin: 4rem;
-  .job {
-    margin: 4rem;
-    border-bottom: 1px solid black;
 
-    .company,
-    .title {
-      font-weight: bold;
+}
+
+.job {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid black;
+
+  .company,
+  .title {
+    font-weight: bold;
+  }
+}
+
+.technologies {
+  margin: 1rem 2rem;
+}
+
+.technologies-list {
+  li {
+    line-height: 1.2;
+    display: inline-block;
+    margin-right: 0.5rem;
+
+    .tech {
+      display: inline-block;
     }
 
-    .technologies {
-      margin: 2rem 4rem;
-
-      ul {
-        @include clearfix;
-      }
-
-      li {
-        float: left;
-        margin-right: 0.5rem;
-        .tech {
-          display: inline-block;
-        }
-        &:after {
-          content: ", ";
-        }
-        &:last-child {
-          margin-right: 0;
-          &:after {
-            content: "";
-          }
-        }
+    &:after {
+      content: ", ";
+    }
+    &:last-child {
+      margin-right: 0;
+      &:after {
+        content: "";
       }
     }
   }
+}
 
-  .location {
-    float: left;
-  }
 
-  .date-range {
-    float: right;
-  }
+.date-range {
+  float: right;
+}
 
-  .projects {
-    margin-top: 4rem;
-    clear: both;
-  }
+.projects {
+  margin-top: 2rem;
+  clear: both;
+}
 
-  .project {
-    margin: 4rem;
+.projects-heading {
+  margin-bottom: 1rem;
+}
+
+.project {
+  @include above(mobile) {
+    margin-left: 4rem;
     &:before {
       float: left;
       content: "-";
@@ -104,3 +115,4 @@ a {
     }
   }
 }
+

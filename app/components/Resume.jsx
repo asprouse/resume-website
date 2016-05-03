@@ -13,7 +13,7 @@ let Resume = ({ resume }) => {
 
   if (resume.loaded) {
     content = (
-      <div>
+      <div className="resume">
         <Person {...resume.person} />
         <Experience experience={resume.experience} />
         <Education education={resume.education} />

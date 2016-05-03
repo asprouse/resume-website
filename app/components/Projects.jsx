@@ -6,7 +6,7 @@ function Projects(props) {
 
   return (
     <div className="projects">
-      <h3>Projects:</h3>
+      <h3 className="projects-heading">Projects:</h3>
       {projects}
     </div>
   );

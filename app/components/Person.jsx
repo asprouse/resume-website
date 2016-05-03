@@ -3,8 +3,8 @@ import React from 'react';
 function Person({ first, last, location }) {
   return (
     <div className="person">
-      <div className="name">{ first } { last }</div>
-      <div className="location">{ location.city }, { location.state }</div>
+      <div className="name">{first} {last}</div>
+      <div className="location">{location.city}, {location.state}</div>
     </div>
   );
 }
